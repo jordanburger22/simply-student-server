@@ -9,8 +9,9 @@ const recipeRouter = require('./routes/recipe/recipeRouter');
 const todoRouter = require('./routes/todo/todoRouter');
 require('dotenv').config();
 const PORT = process.env.PORT || 8000;
+const cors = require('cors')
 
-
+app.use(cors())
 app.use(express.json());
 app.use(morgann('dev'));
 
